@@ -273,24 +273,12 @@ body.moved .menuLink .menuDown {
 .social a:hover {
 	color: rgba(255, 255, 255, 0.25);;	
 }
- .bg/*, .bg2 */{
-	background: #94A0A9 no-repeat fixed;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-}
-#header .bg {
+#header {
 	background-color: #94A0A9;
 	background-image: url(../images/fd-header.png);
 	background-position: 50% 0;
+	background-size: cover;
 }
-/*#skills .bg2 {
-	background-color: rgba(93, 124, 121, 0.9) ;
-	background-image: url(../images/fd-about.png) ;
-	background-position: 50% 470px;
-}*/
 #header {
 	position: relative;
 	height: 100%;

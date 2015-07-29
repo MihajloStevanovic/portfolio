@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*SKIN - A personnaliser*/
 .dark-clr {
-  /*couleur ├®ventuelle fonc├®*/
+  /*couleur éventuelle foncé*/
 }
 
 .norm-clr {
@@ -430,7 +430,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .special-clr {
-  /*couleur sp├®cial*/
+  /*couleur spécial*/
 }
 
 body {
@@ -669,26 +669,13 @@ body.moved .menuLink .menuDown {
   color: rgba(255, 255, 255, 0.25);
 }
 
-.bg {
-  background: #94A0A9 no-repeat fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-
-#header .bg {
+#header {
   background-color: #94A0A9;
   background-image: url(../images/fd-header.png);
   background-position: 50% 0;
+  background-size: cover;
 }
 
-/*#skills .bg2 {
-	background-color: rgba(93, 124, 121, 0.9) ;
-	background-image: url(../images/fd-about.png) ;
-	background-position: 50% 470px;
-}*/
 #header {
   position: relative;
   height: 100%;
