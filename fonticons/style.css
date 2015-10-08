@@ -1,0 +1,74 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?bbpp3g');
+	src:url('fonts/icomoon.eot?bbpp3g#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?bbpp3g') format('truetype'),
+		url('fonts/icomoon.woff?bbpp3g') format('woff'),
+		url('fonts/icomoon.svg?bbpp3g#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-images:before {
+	content: "\e800";
+}
+.icon-user:before {
+	content: "\e801";
+}
+.icon-quotes-left:before {
+	content: "\e802";
+}
+.icon-quotes-right:before {
+	content: "\e803";
+}
+.icon-spinner6:before {
+	content: "\e804";
+}
+.icon-download2:before {
+	content: "\e805";
+}
+.icon-cross:before {
+	content: "\e806";
+}
+.icon-checkmark:before {
+	content: "\e807";
+}
+.icon-embed2:before {
+	content: "\e808";
+}
+.icon-terminal:before {
+	content: "\e809";
+}
+.icon-github4:before {
+	content: "\e80a";
+}
+.icon-wordpress:before {
+	content: "\e80b";
+}
+.icon-apple:before {
+	content: "\e80c";
+}
+.icon-android:before {
+	content: "\e80d";
+}
+.icon-windows8:before {
+	content: "\e80e";
+}
+.icon-linkedin:before {
+	content: "\e80f";
+}
+

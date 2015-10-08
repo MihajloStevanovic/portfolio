@@ -88,6 +88,20 @@ $(document).ready(function(){
 				})
 			},
 
+			displayMobileNav: function(){
+				if(window.innerWidth < 992){
+					$('#header .burger-link').on('click', function(e){
+						e.preventDefault();
+						$('#nav').toggleClass('open');
+					})
+
+					$('#nav a, .nav-overlay').on('click', function(e){
+						e.preventDefault();
+						$('#nav').removeClass('open');
+					})
+				}
+			},
+
 			/*
 			 * UI init
 			 */
@@ -98,6 +112,7 @@ $(document).ready(function(){
 				MSUI.getWindowHash()
 				MSUI.isScrolled()
 				MSUI.getCurrentSection()
+				MSUI.displayMobileNav()
 			}
 
 		}

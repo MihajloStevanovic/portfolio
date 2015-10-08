@@ -505,6 +505,11 @@ body {
   line-height: 1;
 }
 
+.heading-3 {
+  font-size: 1.5em;
+  color: #e4b628;
+}
+
 p {
   font-size: 16px;
   color: #666;
@@ -512,55 +517,15 @@ p {
   padding: 0 0 20px 0;
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  line-height: 70px;
-  background-color: #e4b628;
-  transition: all .2s ease-in-out;
-}
-
-.scrolled #header {
-  height: 50px;
-  line-height: 50px;
-}
-
-#nav {
-  width: 1280px;
-  margin: 0 auto;
-}
-
-#nav ul {
-  display: table;
-}
-
-#nav li {
-  float: left;
-  margin: 0 10px;
-}
-
-#nav a {
-  display: block;
-  font-size: 1.2em;
+a {
   color: #fff;
-  padding: 0 15px;
-  font-weight: 700;
-  transition-property: background, color;
-  transition-duration: .2s;
 }
 
-#nav a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #333;
-}
-
-#nav a.active {
-  box-shadow: inset 0 -4px 0px 0px #fff;
-}
-
+/* ==========================================================================
+   Mobile styles / First view
+   ========================================================================== */
+/* Layout
+----------------------------- */
 section {
   min-height: 500px;
 }
@@ -571,54 +536,327 @@ section {
 }
 
 .article {
-  width: 1280px;
-  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Header
+----------------------------- */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #e4b628;
+  transition: all .2s ease-in-out;
+  z-index: 2;
+}
+#header .burger-link {
+  font-size: 32px;
+  margin: 0 10px;
+}
+#header #nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #333;
+  padding: 20px 0;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}
+#header #nav.open {
+  left: 0;
+}
+#header #nav li a {
+  display: block;
+  padding: 0 20px;
+}
+#header #nav li a.active {
+  background: #BD961D;
+}
+
+.scrolled #header {
+  height: 50px;
+  line-height: 50px;
+}
+
+/* Home
+----------------------------- */
 #home {
   text-align: center;
-  background-image: url("bg-home.jpg");
+  background-image: url("../img/bg-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000;
   background-position: center center;
 }
-
 #home .heading-1 {
   display: inline-block;
 }
-
-.site-name {
+#home .heading-1 .site-name {
   font-size: 1.3em;
 }
-
-.site-title {
+#home .heading-1 .site-title {
   font-weight: 100;
 }
 
+/* About
+----------------------------- */
 #about {
   background-color: #f1f1f1;
 }
 
+/* Skills
+----------------------------- */
 #skills {
   background-color: #fff;
 }
+#skills .skill {
+  position: relative;
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  background: #f1f1f1;
+  margin: 20px auto;
+}
+#skills .skill-label {
+  position: absolute;
+  margin: 0 10px;
+}
+#skills .skill-bar {
+  width: 100%;
+  height: 100%;
+}
+#skills .html5 .skill-bar {
+  background: #f1672c;
+}
+#skills .css3 .skill-bar {
+  background: #30a9dc;
+}
+#skills .js .skill-bar {
+  background: #f1bf26;
+}
+#skills .loaded-bar {
+  width: 80%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#skills .framework {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #9A9483;
+  margin: 10px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  transition: all .2s ease-in-out;
+}
+#skills .framework:hover {
+  background: #e4b628;
+}
 
+/* Portfolio
+----------------------------- */
 #portfolio {
   background-color: #f1f1f1;
 }
-
-.galery {
+#portfolio .galery {
   display: table;
   margin: 0 auto;
 }
-
-.galery li {
+#portfolio .galery li {
   float: left;
   width: 250px;
   height: 250px;
   border: 1px solid #ccc;
   margin: 20px;
+}
+
+/* Contact
+----------------------------- */
+/* ==========================================================================
+   Tablet styles
+   ========================================================================== */
+/* ==========================================================================
+   Desktop style
+   ========================================================================== */
+@media only screen and (min-width: 992px) {
+  .article {
+    width: 992px;
+    margin: 0 auto;
+  }
+
+  	/* Header
+   	----------------------------- */
+  #header {
+    height: 70px;
+    line-height: 70px;
+  }
+  #header .burger-link {
+    display: none;
+  }
+  #header #nav {
+    position: relative;
+    top: 0;
+    left: auto;
+    display: block;
+    width: 1200px;
+    background: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #header #nav ul {
+    display: table;
+  }
+  #header #nav li {
+    float: left;
+    margin: 0 10px;
+  }
+  #header #nav a {
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 0 15px;
+    font-weight: 700;
+    transition-property: background, color;
+    transition-duration: .2s;
+  }
+  #header #nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+  }
+  #header #nav a a.actuve {
+    box-shadow: inset 0 -4px 0px 0px #fff;
+  }
+
+  	/* Home
+   	----------------------------- */
+  /* About
+  ----------------------------- */
+  /* Skills
+  ----------------------------- */
+  /* Portfolio
+  ----------------------------- */
+  /* Contact
+  ----------------------------- */
+}
+/* ==========================================================================
+   Large desktop styles
+   ========================================================================== */
+@media only screen and (min-width: 1200px) {
+  .article {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  	/* Header
+   	----------------------------- */
+  	/* Home
+   	----------------------------- */
+  /* About
+   ----------------------------- */
+  /* Skills
+  ----------------------------- */
+  /* Portfolio
+  ----------------------------- */
+  /* Contact
+  ----------------------------- */
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?bbpp3g");
+  src: url("../fonts/icomoon.eot?bbpp3g#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?bbpp3g") format("truetype"), url("../fonts/icomoon.woff?bbpp3g") format("woff"), url("../fonts/icomoon.svg?bbpp3g#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-images:before {
+  content: "\e800";
+}
+
+.icon-user:before {
+  content: "\e801";
+}
+
+.icon-quotes-left:before {
+  content: "\e802";
+}
+
+.icon-quotes-right:before {
+  content: "\e803";
+}
+
+.icon-spinner6:before {
+  content: "\e804";
+}
+
+.icon-menu:before {
+  content: "\e810";
+}
+
+.icon-download2:before {
+  content: "\e805";
+}
+
+.icon-cross:before {
+  content: "\e806";
+}
+
+.icon-checkmark:before {
+  content: "\e807";
+}
+
+.icon-embed2:before {
+  content: "\e808";
+}
+
+.icon-terminal:before {
+  content: "\e809";
+}
+
+.icon-mail2:before {
+  content: "\e811";
+}
+
+.icon-github4:before {
+  content: "\e80a";
+}
+
+.icon-wordpress:before {
+  content: "\e80b";
+}
+
+.icon-apple:before {
+  content: "\e80c";
+}
+
+.icon-android:before {
+  content: "\e80d";
+}
+
+.icon-windows8:before {
+  content: "\e80e";
+}
+
+.icon-linkedin:before {
+  content: "\e80f";
 }
 
 /* ==========================================================================
