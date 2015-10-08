@@ -480,7 +480,7 @@ th {
   padding: 0;
 }
 
-body, ul, li, p, a, h1, h2, h3 {
+body, ul, li, p, a, h1, h2, h3, figure {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -624,7 +624,6 @@ section {
 }
 #skills .skill {
   position: relative;
-  width: 90%;
   height: 30px;
   line-height: 30px;
   background: #f1f1f1;
@@ -638,21 +637,37 @@ section {
   width: 100%;
   height: 100%;
 }
+#skills .html5 .loaded-bar {
+  width: 90%;
+}
 #skills .html5 .skill-bar {
   background: #f1672c;
 }
+#skills .css3 .loaded-bar {
+  width: 80%;
+}
 #skills .css3 .skill-bar {
   background: #30a9dc;
+}
+#skills .js .loaded-bar {
+  width: 70%;
 }
 #skills .js .skill-bar {
   background: #f1bf26;
 }
 #skills .loaded-bar {
-  width: 80%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-#skills .framework {
+#skills .frameworks {
+  display: table;
+}
+#skills .frameworks li {
+  width: 33.333%;
+  float: left;
+  text-align: center;
+}
+#skills .frameworks li .framework {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -664,7 +679,7 @@ section {
   border-radius: 50px;
   transition: all .2s ease-in-out;
 }
-#skills .framework:hover {
+#skills .frameworks li .framework:hover {
   background: #e4b628;
 }
 
@@ -675,14 +690,20 @@ section {
 }
 #portfolio .galery {
   display: table;
+  width: 100%;
   margin: 0 auto;
 }
 #portfolio .galery li {
   float: left;
-  width: 250px;
+  width: 50%;
   height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#portfolio .galery li .item {
+  width: 100%;
+  height: 100%;
   border: 1px solid #ccc;
-  margin: 20px;
 }
 
 /* Contact
@@ -690,6 +711,13 @@ section {
 /* ==========================================================================
    Tablet styles
    ========================================================================== */
+@media only screen and (min-width: 768px) {
+  /* Skills
+  ============================= */
+  #skills .frameworks li {
+    width: 25%;
+  }
+}
 /* ==========================================================================
    Desktop style
    ========================================================================== */
@@ -748,6 +776,10 @@ section {
   ============================= */
   /* Skills
   ============================= */
+  #skills .frameworks li {
+    width: auto;
+  }
+
   /* Portfolio
   ============================= */
   /* Contact

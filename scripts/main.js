@@ -121,10 +121,10 @@ var MS = function(){
 $(document).ready(function(){
 	
 	MS();
-	$('#home').parallaxe({
+	/*$('#home').parallaxe({
 		speed: 1.5,
 		direction: 'top',
 		type: 'background'
-	});
+	});*/
 
 });
