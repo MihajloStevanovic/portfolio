@@ -33,7 +33,7 @@ a {
    ========================================================================== */
 
 /* Layout
------------------------------ */
+============================= */
 section {
 	min-height: 500px;
 }
@@ -44,9 +44,15 @@ section {
 .article {
 	padding: 20px;
 }
+.icon {
+	font-size: 2em;
+	display: block;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
 
 /* Header
------------------------------ */
+============================= */
 #header {
 	position: fixed;
 	top: 0;
@@ -70,14 +76,15 @@ section {
 		background: #333;
 		padding: 20px 0;
 		box-sizing: border-box;
-			transition: all .2s ease-in-out;
 		&.open {
 			left: 0;
+			transition: all .2s ease-in-out;
 		}
 		li {
 			a {
 				display: block;
 				padding: 0 20px;
+				outline: none;
 				&.active {
 					background: #BD961D;
 				}
@@ -91,14 +98,14 @@ section {
 }
 
 /* Home
------------------------------ */
+============================= */
 #home {
 	text-align: center;
 	background-image: url("../img/bg-home.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #000;
-	background-position: center center;
+	background-position: center top;
 	.heading-1 {
 		display: inline-block;
 		.site-name {
@@ -111,13 +118,13 @@ section {
 }
 
 /* About
------------------------------ */
+============================= */
 #about {
 	background-color: #f1f1f1;
 }
 
 /* Skills
------------------------------ */
+============================= */
 #skills {
 
 	background-color: #fff;
@@ -173,7 +180,7 @@ section {
 }
 
 /* Portfolio
------------------------------ */
+============================= */
 #portfolio {
 	background-color: #f1f1f1;
 	.galery {
@@ -190,7 +197,7 @@ section {
 }
 
 /* Contact
------------------------------ */
+============================= */
 #contact {
 
 }
@@ -214,7 +221,7 @@ section {
 	}
 
 	/* Header
- 	----------------------------- */
+ 	============================= */
 	#header {
 		height: 70px;
 		line-height: 70px;
@@ -257,19 +264,19 @@ section {
 	}
 
 	/* Home
- 	----------------------------- */
+ 	============================= */
 
 	/* About
-	----------------------------- */
+	============================= */
 
 	/* Skills
-	----------------------------- */
+	============================= */
 
 	/* Portfolio
-	----------------------------- */
+	============================= */
 
 	/* Contact
-	----------------------------- */
+	============================= */
 	
 	
 	
@@ -286,20 +293,20 @@ section {
 	}
 
 	/* Header
- 	----------------------------- */
+ 	============================= */
 
 	/* Home
- 	----------------------------- */
+ 	============================= */
 
 	/* About
-	 ----------------------------- */
+	 ============================= */
 
 	 /* Skills
-	 ----------------------------- */
+	 ============================= */
 
 	 /* Portfolio
-	 ----------------------------- */
+	 ============================= */
 
 	 /* Contact
-	 ----------------------------- */
+	 ============================= */
 }
